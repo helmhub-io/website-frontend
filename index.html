@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelmHub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav-container">
+                <div class="nav-left">
+                    <a href="#" class="logo">HelmHub</a>
+                    <a href="#" class="nav-link">Guide</a>
+                    <a href="#" class="nav-link">Blog</a>
+                </div>
+                <div class="nav-right">
+                    <button class="theme-toggle" onclick="toggleTheme()">
+                        <i class="fa fa-moon-o" id="theme-icon"></i>
+                    </button>
+                    <a href="https://github.com/helmhub/helmhub" class="github-link">
+                        <i class="fa fa-github"></i>
+                    </a>
+                    <div class="search-container">
+                        <input type="text" placeholder="Search charts..." class="search-input">
+                        <button class="search-btn">🔍</button>
+                    </div>
+                </div>
+                <button class="hamburger" onclick="toggleMenu()">☰</button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#charts">Charts</a></li>
+                    <li><a href="#docs">Docs</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="container">
+            <h1>HelmHub.io</h1>
+            <p class="subtitle">Your Kubernetes Helm Chart Repository</p>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>The Kubernetes Package Manager</h2>
+            <p>Find, install and publish Kubernetes packages with the upcoming world's largest repository of Helm charts.</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">Only God Knows</span>
+                    <span class="stat-label">Charts</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">Only God Knows</span>
+                    <span class="stat-label">Downloads</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">Only God Knows</span>
+                    <span class="stat-label">Contributors</span>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <a href="#charts" class="btn">Browse Charts</a>
+                <a href="#features" class="btn">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Features</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3> Easy Deployment</h3>
+                    <p>Deploy applications to Kubernetes clusters with simple Helm commands.</p>
+                </div>
+                <div class="feature">
+                    <h3>Chart Repository</h3>
+                    <p>Browse and discover a wide variety of pre-configured Helm charts.</p>
+                </div>
+                <div class="feature">
+                    <h3>Customizable</h3>
+                    <p>Easily customize chart values to fit your specific deployment needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="charts" id="charts">
+        <div class="container">
+            <h2>Explore our Featured Charts</h2>
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <h3>nginx</h3>
+                    <p>High-performance web server and reverse proxy</p>
+                    <div class="chart-links">
+                        <a href="#" class="btn-small">View Docs</a>
+                        <a href="https://github.com/helmhub/charts/tree/main/helmhub/nginx" class="btn-small github">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>postgresql</h3>
+                    <p>Object-relational database management system</p>
+                    <div class="chart-links">
+                        <a href="#" class="btn-small">View Docs</a>
+                        <a href="https://github.com/helmhub/charts/tree/main/helmhub/postgresql" class="btn-small github">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h3>redis</h3>
+                    <p>In-memory data structure store and cache</p>
+                    <div class="chart-links">
+                        <a href="#" class="btn-small">View Docs</a>
+                        <a href="https://github.com/helmhub/charts/tree/main/helmhub/redis" class="btn-small github">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all-container">
+                <a href="#" class="btn">View All Charts</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="getting-started">
+        <div class="container">
+            <h2>How to Get Started</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Install Helm</h3>
+                    <p>Download and install Helm CLI on your local machine or CI/CD environment.</p>
+                    <div class="step-action">
+                        <pre><code id="install-cmd">curl https://get.helm.sh/helm-v3.13.0-linux-amd64.tar.gz | tar -xz</code></pre>
+                        
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Browse Charts</h3>
+                    <p>Explore our comprehensive collection of Helm charts to find the right application for your needs.</p>
+                    <div class="step-action">
+                        <a href="#charts" class="btn-small">Browse All Charts</a>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Deploy Charts</h3>
+                    <p>Search, customize, and deploy charts to your Kubernetes cluster with helm install.</p>
+                    <div class="step-action">
+                        <pre><code id="deploy-cmd">helm install my-release helmhub/nginx</code></pre>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Docs</h4>
+                    <ul>
+                        <li><a href="#">Getting Started</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>Helmhub Community
+                        <li><a href="#">Stack Overflow</a></li>
+                        <li><a href="#">X (Twitter)</a></li>
+                        <li><a href="#">Keybase</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>More</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>With Love From Naija...🇳🇬 </p>
+                <p>Copyright © 2025 Helmhub</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            const text = element.textContent;
+            navigator.clipboard.writeText(text).then(function() {
+                
+                const button = element.nextElementSibling;
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 2000);
+            });
+        }
+
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeIcon = document.getElementById('theme-icon');
+            
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.removeAttribute('data-theme');
+                themeIcon.className = 'fa fa-moon-o';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                themeIcon.className = 'fa fa-sun-o';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            const themeIcon = document.getElementById('theme-icon');
+            
+            if (savedTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                themeIcon.className = 'fa fa-sun-o';
+            }
+        });
+    </script>
+</body>
+</html>
