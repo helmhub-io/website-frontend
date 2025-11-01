@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HelmHub</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="icon" type="image/x-icon" href="/website-frontend/assets/logo/helm-white-fav.png">
     <link rel="stylesheet" href="style.css">
+
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
 </head>
@@ -14,13 +17,18 @@
         <div class="container">
             <div class="nav-container">
                 <div class="nav-left">
-                    <a href="#" class="logo">HelmHub</a>
+                    <img src="/website-frontend/assets/logo/helm-white.png" alt="" class="logo">
+                    <a href="#" class="logo">HelmHub.IO</a>
+                    <a href="#" class="nav-link">About</a>
+                    <a href="#" class="nav-link">Blog</a>
+                    <a href="#" class="nav-link">Docs</a>
+                    <a href="#" class="nav-link">Team</a>
                     <a href="#" class="nav-link">Guide</a>
                     <a href="#" class="nav-link">Blog</a>
                 </div>
                 <div class="nav-right">
                     <button class="theme-toggle" onclick="toggleTheme()">
-                        <i class="fa fa-moon-o" id="theme-icon"></i>
+                        <i class="fa fa-shield" aria-hidden="true"></i>
                     </button>
                     <a href="https://github.com/helmhub/helmhub" class="github-link">
                         <i class="fa fa-github"></i>
@@ -43,26 +51,36 @@
     <header>
         <div class="container">
             <h1>HelmHub.io</h1>
-            <p class="subtitle">Your Kubernetes Helm Chart Repository</p>
+            <p class="subtitle">Your Kubernetes Helm Chart Repository, Maintained By A Community Of Passionate Engineers</p>
+
+            
         </div>
     </header>
 
     <section class="hero">
         <div class="container">
-            <h2>The Kubernetes Package Manager</h2>
+            
+         
+            <h2>Why Choose HelmHub Charts?</h2>
             <p>Find, install and publish Kubernetes packages with the upcoming world's largest repository of Helm charts.</p>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">Only God Knows</span>
-                    <span class="stat-label">Charts</span>
+
+
+            <div class="hero-why">
+
+                <div class="why">
+                    <i class="fa fa-lock fa-4x" aria-hidden="true"></i>
+                    <h3>Secure</h3>
+                    <p>Choose from a large repo of Secure charts</p>
                 </div>
-                <div class="stat">
-                    <span class="stat-number">Only God Knows</span>
-                    <span class="stat-label">Downloads</span>
+                <div class="why">
+                    <i class="fa fa-wrench fa-4x" aria-hidden="true"></i>
+                    <h3> Flexible </h3>
+                    <p>Choose the chart that best suite your project</p>
                 </div>
-                <div class="stat">
-                    <span class="stat-number">Only God Knows</span>
-                    <span class="stat-label">Contributors</span>
+                <div class="why">
+                    <i class="fa fa-users fa-4x" aria-hidden="true"></i>
+                    <h3>Community-based support </h3>
+                    <p>Choose from a large and supportive community</p>
                 </div>
             </div>
             <div class="hero-buttons">
