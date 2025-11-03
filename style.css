@@ -108,7 +108,7 @@ img.logo{ width: 4rem; height:4rem; }
 footer { background: var(--nav-bg); color: white; padding: 3rem 0 1rem; }
 .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
 .footer-section h4 { margin-bottom: 1rem; font-size: 1.1rem; }
-.footer-section ul { list-style: none; }
+.footer-section ul { list-style: none; font-size: 0.8rem;}
 .footer-section li { margin-bottom: 0.5rem; }
 .footer-section a { color: #e5e7eb; text-decoration: none; transition: color 0.3s; }
 .footer-section a:hover { color: white; }
@@ -116,7 +116,7 @@ footer { background: var(--nav-bg); color: white; padding: 3rem 0 1rem; }
 .footer-bottom p { color: #e5e7eb; }
 
 /* Mobile Responsive */
-@media (max-width: 768px) {
+@media (max-width: 720px) {
   .nav-left { gap: 1rem; }
   .nav-link { display: none; }
   .hamburger { display: block; }
